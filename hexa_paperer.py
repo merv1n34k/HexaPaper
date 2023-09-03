@@ -8,7 +8,7 @@ from math import radians, sin, cos, sqrt
 
 # Declare constants
 PDF_NAME = "hexa_paper" # name of the pdf
-SCALE = 25
+SCALE = 25 # Best for a4 paper
 PAGE_FORMAT = None
 HELP_LINES = "all" # this will configure how many help lined you want, options can be int 0-12 or "all"
 MAX_HELP_LINES = 12
@@ -124,7 +124,7 @@ def draw_grid(canvas,scale,help_lines_show=HELP_LINES,thickness_1=HEX_THICKNESS,
 # Create a new PDF file
 canvas = canvas.Canvas(PDF_NAME + ".pdf")
 
-draw_grid(canvas,SCALE,help_lines_show='all')
+draw_grid(canvas,SCALE)
 
 # Save the PDF file
 canvas.save()
